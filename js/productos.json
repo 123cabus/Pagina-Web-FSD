@@ -1,0 +1,52 @@
+[
+    {
+        "id": "accesorio-01",
+        "titulo": "Aro metálico soporte de lámpara",
+        "imagen": "./img/accesorios/01.webp",
+        "categoria": {
+            "nombre": "Accesorios",
+            "id": "accesorios"
+        },
+        "precio": 600
+    },
+    {
+        "id": "accesorio-02",
+        "titulo": "Portalamparas Zocalo Gu10",
+        "imagen": "./img/accesorios/02.webp",
+        "categoria": {
+            "nombre": "Accesorios",
+            "id": "accesorios"
+        },
+        "precio": 500
+    },
+    {
+        "id": "foco-01",
+        "titulo": "Pack 10 unidades focos led",
+        "imagen": "./img/focos/01.webp",
+        "categoria": {
+            "nombre": "Focos LED",
+            "id": "focos"
+        },
+        "precio": 1500
+    },
+    {
+        "id": "foco-02",
+        "titulo": "Lámpara dicroica",
+        "imagen": "./img/focos/02.webp",
+        "categoria": {
+            "nombre": "Focos LED",
+            "id": "focos"
+        },
+        "precio": 1300
+    },
+    {
+        "id": "foco-03",
+        "titulo": "Dicroica led",
+        "imagen": "./img/focos/03.webp",
+        "categoria": {
+            "nombre": "Focos LED",
+            "id": "focos"
+        },
+        "precio": 1500
+    }
+]
