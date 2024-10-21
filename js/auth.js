@@ -55,21 +55,27 @@ fetch("./js/productos.json")
 function mostrarOpcionesAdmin() {
   seccionLogin.style.display = "none";
   seccionAdmin.innerHTML = `
-      <h3>Agregar nuevo producto</h3>
-      <form id="form-agregar-producto">
-        <input type="text" id="titulo" placeholder="Título del producto" required />
-        <input type="number" id="precio" placeholder="Precio" required />
-        <input type="file" id="imagen" accept="image/*" required />
-        <select id="categoria" required>
-          <option value="" disabled selected>Seleccione una categoría</option>
-          <option value="accesorios">Accesorios</option>
-          <option value="focos">Focos LED</option>
-        </select>
-        <img id="preview-imagen" src="" alt="Vista previa" style="max-width: 200px; display: none;" />
-        <button type="submit">Agregar Producto</button>
-      </form>
-      <button id="cerrar-sesion">Cerrar sesión</button>
-      <a href="./index.html">Volver</a>
+     <div class="login-section">
+     <div class="form-container" id="form-container">
+        <h2 class="titulo-principal">Agregar nuevo producto</h2>
+        <form class="form-agregar-producto" id="form-agregar-producto">
+          <input type="text" id="titulo" placeholder="Título del producto" required />
+          <input type="number" id="precio" placeholder="Precio" required />
+          <input type="file" id="imagen" accept="image/*" required />
+          <select id="categoria" required>
+            <option value="" disabled selected>Seleccione una categoría</option>
+            <option value="accesorios">Accesorios</option>
+            <option value="focos">Focos LED</option>
+          </select>
+          <img id="preview-imagen" src="" alt="Vista previa" style="max-width: 200px; display: none;" />
+          <button type="submit">Agregar Producto</button>
+        </form>
+        <div class="botones-admin">
+        <a style="color: var(--red);" href="./index.html"><i class="bi bi-arrow-left"></i> Volver a la tienda</a>
+        <button class="cerrar-sesion" id="cerrar-sesion">Cerrar sesión</button>
+        </div>
+      </div>
+      </div>
     `;
 
   setupAdminFunctions();

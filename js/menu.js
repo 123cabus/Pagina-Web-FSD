@@ -1,11 +1,11 @@
-const openMenu = document.querySelector("#open-menu");
-const closeMenu = document.querySelector("#close-menu");
+const abrirMenu = document.querySelector("#open-menu");
+const cerrarMenu = document.querySelector("#close-menu");
 const aside = document.querySelector("aside");
 
-openMenu.addEventListener("click", () => {
+abrirMenu.addEventListener("click", () => {
     aside.classList.add("aside-visible");
 })
 
-closeMenu.addEventListener("click", () => {
+cerrarMenu.addEventListener("click", () => {
     aside.classList.remove("aside-visible");
 })
