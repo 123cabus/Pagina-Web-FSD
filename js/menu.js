@@ -3,9 +3,9 @@ const cerrarMenu = document.querySelector("#close-menu");
 const aside = document.querySelector("aside");
 
 abrirMenu.addEventListener("click", () => {
-    aside.classList.add("aside-visible");
-})
+  aside.classList.add("aside-visible");
+});
 
 cerrarMenu.addEventListener("click", () => {
-    aside.classList.remove("aside-visible");
-})
+  aside.classList.remove("aside-visible");
+});

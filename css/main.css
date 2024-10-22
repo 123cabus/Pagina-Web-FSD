@@ -170,6 +170,7 @@ aside {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  z-index: 100;
 }
 
 .perfil-icono {
@@ -285,6 +286,10 @@ main {
   border-radius: 1rem;
 }
 
+.carrito-producto-subtotal {
+  display: none;
+}
+
 .carrito-producto-imagen {
   width: 4rem;
   border-radius: 1rem;
@@ -303,7 +308,8 @@ main {
 
 .carrito-acciones {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .carrito-acciones-vaciar {
@@ -322,7 +328,7 @@ main {
 
 .carrito-acciones-total {
   display: flex;
-  background-color: var(--gray);
+  background-color: var(--white);
   padding: 1rem;
   color: var(--main);
   text-transform: uppercase;
@@ -330,7 +336,6 @@ main {
   border-bottom-left-radius: 1rem;
   gap: 1rem;
 }
-
 .carrito-acciones-comprar {
   border: 0;
   background-color: var(--main);
@@ -340,10 +345,6 @@ main {
   cursor: pointer;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
-}
-
-.close-menu {
-  display: none;
 }
 
 .disabled {
@@ -486,6 +487,10 @@ main {
     display: flex;
   }
 
+  .close-menu {
+    display: none;
+  }
+
   .wrapper {
     padding: 0 2rem;
   }
@@ -501,6 +506,15 @@ main {
     gap: 1rem;
   }
 
+  .carrito-acciones {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .carrito-producto-subtotal {
+    display: block;
+  }
+
   .login-form {
     width: 400px;
   }
@@ -511,19 +525,4 @@ main {
 }
 
 @media screen and (max-width: 600px) {
-  .carrito-producto {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: 0.5rem;
-  }
-
-  .carrito-producto-subtotal {
-    display: none;
-  }
-
-  .carrito-acciones {
-    flex-wrap: wrap;
-    row-gap: 1rem;
-  }
 }
