@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JC.BOLSOS</title>
+    <title>Detalle del Producto</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
@@ -14,31 +14,22 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="../css/main.css" />
   </head>
   <body>
     <div class="wrapper">
-      <!-- Header con el ícono de carrito y logo de usuario -->
       <header class="header-mobile">
         <button class="open-menu" id="open-menu">
           <i class="bi bi-list"></i>
         </button>
-        <h1 class="logo"><a href="./html/404.html">JC.BOLSOS</a></h1>
-        <a href="./html/carrito.html" class="carrito-icon">
-          <i class="bi bi-cart"></i>
-        </a>
-        <!-- Logo de usuario -->
-        <a href="./html/admin.html" class="usuario-icon">
-          <i class="bi bi-person"></i>
-        </a>
+        <h1 class="logo"><a href="../index.html">JC.BOLSOS</a></h1>
       </header>
-
       <aside>
         <button class="close-menu" id="close-menu">
           <i class="bi bi-x"></i>
         </button>
         <header>
-          <h1 class="logo"><a href="/pag-tito/html/404.html">JC.BOLSOS</a></h1>
+          <h1 class="logo"><a href="../index.html">JC.BOLSOS</a></h1>
         </header>
         <nav>
           <ul class="menu">
@@ -63,26 +54,27 @@
               placeholder="Buscar productos..."
             />
           </ul>
+          <a href="../html/admin.html">
+            <i class="bi bi-person-circle perfil-icono"></i>
+          </a>
+          <a class="boton-carrito" href="../html/carrito.html">
+            <i class="bi bi-cart-fill"></i>
+            <span id="numerito" class="numerito">0</span>
+          </a>
         </nav>
       </aside>
-
       <main>
         <div class="container">
-          <h2 class="titulo-principal" id="titulo-principal">
-            Todos los productos
-          </h2>
-          <div id="contenedor-productos" class="contenedor-productos"></div>
+          <h2 class="titulo-principal" id="titulo-principal">Detalle del Producto</h2>
+          <div id="contenedor-detalle" class="contenedor-detalle"></div>
         </div>
       </main>
     </div>
-    
-    <footer>
-      <p class="texto-footer">© 2024 julian cabus</p>
-      <!-- Enlace de FAQ agregado al footer -->
-      <a href="./html/faq.html" class="faq-link">Preguntas Frecuentes</a>
-    </footer>
-
-    <script src="./js/main.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   </body>
+
+  <footer>
+    <p class="texto-footer">© 2024 julian cabus</p>
+  </footer>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="../js/main.js"></script>
 </html>

@@ -1,52 +1,52 @@
 [
     {
         "id": "accesorio-01",
-        "titulo": "Aro metálico soporte de lámpara",
-        "imagen": "./img/accesorios/01.webp",
+        "titulo": "Bolso de mano o clutch",
+        "imagen": "./imagenes/imagenes-titos/bolso comun 2.jpg",
         "categoria": {
-            "nombre": "Accesorios",
+            "nombre": "Bolsos y Accesorios",
             "id": "accesorios"
         },
-        "precio": 600
+        "precio": 20
     },
     {
         "id": "accesorio-02",
-        "titulo": "Portalamparas Zocalo Gu10",
-        "imagen": "./img/accesorios/02.webp",
+        "titulo": "Bolso bandolera",
+        "imagen": "./imagenes/imagenes-titos/bandolera.jpg",
         "categoria": {
-            "nombre": "Accesorios",
+            "nombre": "Bolsos y Accesorios",
             "id": "accesorios"
         },
-        "precio": 500
+        "precio": 18
     },
     {
-        "id": "foco-01",
-        "titulo": "Pack 10 unidades focos led",
-        "imagen": "./img/focos/01.webp",
+        "id": "bolso-01",
+        "titulo": "Bolso total black",
+        "imagen": "./imagenes/imagenes-titos/bolso tote.jpg",
         "categoria": {
-            "nombre": "Focos LED",
-            "id": "focos"
+            "nombre": "Bolsos",
+            "id": "bolsos"
         },
-        "precio": 1500
+        "precio": 50
     },
     {
-        "id": "foco-02",
-        "titulo": "Lámpara dicroica",
-        "imagen": "./img/focos/02.webp",
+        "id": "bolso-02",
+        "titulo": "Bolso para móvil",
+        "imagen": "./imagenes/imagenes-titos/bolso movil.jpg",
         "categoria": {
-            "nombre": "Focos LED",
-            "id": "focos"
+            "nombre": "Bolsos",
+            "id": "bolsos"
         },
-        "precio": 1300
+        "precio": 45
     },
     {
-        "id": "foco-03",
-        "titulo": "Dicroica led",
-        "imagen": "./img/focos/03.webp",
+        "id": "bolso-03",
+        "titulo": "Monedero",
+        "imagen": "./imagenes/imagenes-titos/monedero.jpg",
         "categoria": {
-            "nombre": "Focos LED",
-            "id": "focos"
+            "nombre": "Bolsos",
+            "id": "bolsos"
         },
-        "precio": 1500
+        "precio": 50
     }
 ]

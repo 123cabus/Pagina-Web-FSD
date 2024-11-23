@@ -65,16 +65,15 @@ function mostrarOpcionesAdmin() {
           <select id="categoria" required>
             <option value="" disabled selected>Seleccione una categoría</option>
             <option value="accesorios">Accesorios</option>
-            <option value="focos">Focos LED</option>
+            <option value="bolsos">Bolsos</option>
           </select>
           <img id="preview-imagen" src="" alt="Vista previa" style="max-width: 200px; display: none;" />
           <button type="submit">Agregar Producto</button>
         </form>
         <div class="botones-admin">
-        <a style="color: var(--red);" href="./index.html"><i class="bi bi-arrow-left"></i> Volver a la tienda</a>
+        <a style="color: var(--red);" href="../index.html"><i class="bi bi-arrow-left"></i> Volver al inicio</a>
         <button class="cerrar-sesion" id="cerrar-sesion">Cerrar sesión</button>
-        </div>
-      </div>
+      
       </div>
     `;
 
@@ -101,7 +100,6 @@ function setupAdminFunctions() {
     }
   });
 
-  // Manejo del formulario de agregar producto
   formAgregarProducto.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -124,15 +122,15 @@ function setupAdminFunctions() {
     const reader = new FileReader();
     reader.onload = (loadEvent) => {
       const categorias = {
+        bolsos: { id: "bolsos", nombre: "Bolsos" },
         accesorios: { id: "accesorios", nombre: "Accesorios" },
-        focos: { id: "focos", nombre: "Focos LED" },
       };
 
       const nuevoProducto = {
-        id: `producto-${Date.now()}`, // Generar un ID único
+        id: `producto-${Date.now()}`, 
         titulo: titulo,
         precio: precio,
-        imagen: loadEvent.target.result, // Usar el Data URL de la imagen
+        imagen: loadEvent.target.result, 
         categoria: categorias[categoriaId],
       };
 
@@ -142,17 +140,44 @@ function setupAdminFunctions() {
       previewImagen.style.display = "none";
     };
 
-    reader.readAsDataURL(imagenFile); // Leer la imagen como Data URL
+    reader.readAsDataURL(imagenFile); 
   });
-  // Función de cerrar sesión
-  cerrarSesionBtn.addEventListener("click", () => {
-    localStorage.removeItem("sesion-admin");
-    location.reload();
-  });
+  
 }
 
-// Función para agregar un producto
 function agregarProducto(nuevoProducto) {
   productos.push(nuevoProducto);
   localStorage.setItem("productos", JSON.stringify(productos));
 }
+
+
+document.getElementById("borrar-storage").addEventListener("click", function () {
+  localStorage.clear();
+  location.reload();
+});
+document.getElementById("formAgregarProducto").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const nuevoProducto = {
+    id: Date.now().toString(), // Generar un ID único
+    titulo: document.getElementById("titulo").value,
+    categoria: {
+      id: document.getElementById("categoria").value,
+    },
+    precio: parseFloat(document.getElementById("precio").value),
+    imagen: document.getElementById("imagen").value,
+  };
+
+  // Obtener los productos existentes desde localStorage
+  const productosLocalStorage = JSON.parse(localStorage.getItem("productos")) || [];
+
+  // Agregar el nuevo producto al array
+  productosLocalStorage.push(nuevoProducto);
+
+  // Guardar el array actualizado en localStorage
+  localStorage.setItem("productos", JSON.stringify(productosLocalStorage));
+
+  alert("Producto agregado correctamente");
+
+
+});
